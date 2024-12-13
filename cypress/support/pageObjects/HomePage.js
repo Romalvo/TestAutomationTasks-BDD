@@ -30,6 +30,31 @@ class HomePage {
         cy.get('#pngPreloaderBG').should('be.visible');
     }
 
+    verifyLanguageDropdownVisible() {
+        cy.get('[data-cy="navDropdown-language"]').should('be.visible');
+    }
+
+    clickLanguageDropdown() {
+        cy.get('[data-cy="navDropdown-language"]').click();
+    }
+
+    verifyLanguageMenuVisible() {
+        cy.get('.sc-tsFYE').should('be.visible');
+    }
+
+    selectLanguage(language) {
+        cy.contains('.sc-crXcEl', language).click();
+    }
+
+    verifyCorrectLinkLoaded(language) {
+        const languageLinkMap = {
+            FI: 'https://www.boostcasino.com/fi',
+            EE: 'https://www.boostcasino.com/ee',
+            RU: 'https://www.boostcasino.com/ru'
+        }
+      
+        cy.url().should('eq', languageLinkMap[language])
+    }
 
 }
 export default HomePage;
