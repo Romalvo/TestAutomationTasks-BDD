@@ -4,7 +4,7 @@ import { setViewport } from "../../viewportHelper";
 
 const homePage = new HomePage();
 
-Given('I am on the Boost Casino home page using on {string} view', (device) => {
+Given('I am on the Boost Casino home page on {string} view', (device) => {
     setViewport(device);
     cy.visit('/');
 });
