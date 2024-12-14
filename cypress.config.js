@@ -13,7 +13,10 @@ module.exports = defineConfig({
       addCucumberPreprocessorPlugin(on, config);
       return config;
     },
-    specPattern: 'cypress/e2e/**/*.feature', //Path for feature files
+    specPattern: [
+      "cypress/e2e/desktop/*.feature", //Path for feature files tested on desktop view
+      "cypress/e2e/mobile/*.feature" //Path for feature files tested on mobile view
+    ],
     baseUrl: "https://boostcasino.com", // Base URL for the site you're testing
   },
 });
