@@ -6,7 +6,7 @@ const mobileHomePage = new MobileHomePage();
 
 Given('I am on the Boost Casino mobile home page using {string} view', (device) => {
     setViewport(device);
-    cy.visit(baseUrl);
+    cy.visit('/');
 });
 
 When('I tap on the burger menu', () => {
