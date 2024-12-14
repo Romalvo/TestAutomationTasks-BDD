@@ -1,6 +1,10 @@
 class MobileHomePage {
     burgerMenuIcon = ('label > span > span');
     menuItems = ('nav.sc-tsFYE:first');
+    casinoIcon =('nav.sc-tsFYE:first ul > li:nth-of-type(2)');
+    casinoMenuItems = ('nav.sc-tsFYE:first ul > li:nth-of-type(2) ul')
+    //liveCasinoIcon = ();
+    //promotionsIcon = ();
 
     openMenu() {
         cy.get(this.burgerMenuIcon).should('be.visible').click();
@@ -12,8 +16,6 @@ class MobileHomePage {
 
     verifyMenuItems(expectedItems) {
         cy.get(this.menuItems).then(($items) => {
-
-            cy.log('Menu HTML:', $items.html());
 
             const actualItems = $items.map((_, el) => {
                 return Cypress.$(el).text().trim()}).get();
@@ -39,6 +41,28 @@ class MobileHomePage {
         cy.get('header').contains('Boost Casino Support Center').should('be.visible');
     }
 
+    clickCasino() {
+        cy.get(this.casinoIcon).click();
+    }
 
+    verifyCasinoMenuOpen() {
+        cy.get(this.casinoMenuItems).should('be.visible');
+    }
+
+    verifyCasinoMenuItems(expectedItems) {
+        cy.get(this.casinoMenuItems).then(($items) => {
+            const actualItems = $items.map((_, el) => {
+                return Cypress.$(el).text().trim()}).get();
+            cy.log('Actual Casino Menu Items:', actualItems);
+            expect(actualItems).to.have.members(expectedItems);
+    });
+    }
+
+    clickCategoryAndVerifyUrl(categoryName, expectedUrl) {
+        cy.get(this.casinoMenuItems)
+          .contains(categoryName)
+          .click(); 
+        cy.url().should('include', expectedUrl); 
+      }
 }
 export default MobileHomePage;
