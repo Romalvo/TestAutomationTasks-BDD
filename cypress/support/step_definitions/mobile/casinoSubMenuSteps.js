@@ -7,6 +7,8 @@ const mobileHomePage = new MobileHomePage();
 Given('I am on Boost Casino home page using {string} view', (device) => {
     setViewport(device);
     cy.visit('/');
+    mobileHomePage.closeCookies();
+
 });
 
 When('I click on burger menu on home page', () => {
@@ -31,8 +33,9 @@ Then('the menu should contain the following Entries list:', (dataTable) => {
 });
 
 When('I click on each category one by one', (dataTable) =>{
-    const categories = dataTable.raw().hashes();
-    categories.forEach(({ Category, URL}) => {
-        mobileHomePage.clickCategoryAndVerifyUrl(Category, URL);
-    })
+    const categories = dataTable.raw();
+    categories.forEach(([category, expectedUrl]) => {
+        mobileHomePage.clickCategoryAndVerifyUrls(category, expectedUrl);
+    });
+    
 });
