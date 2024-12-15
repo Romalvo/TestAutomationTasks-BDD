@@ -17,6 +17,11 @@ module.exports = defineConfig({
       "cypress/e2e/desktop/*.feature", //Path for feature files tested on desktop view
       "cypress/e2e/mobile/*.feature" //Path for feature files tested on mobile view
     ],
-    baseUrl: "https://boostcasino.com", // Base URL for the site you're testing
+    baseUrl: "https://boostcasino.com", // Base URL for the site 
+
+    defaultBrowser: 'chrome',
+
+    defaultCommandTimeout: 20000,
+    requestTimeout : 20000
   },
 });
