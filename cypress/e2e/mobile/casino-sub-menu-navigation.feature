@@ -20,17 +20,17 @@ Feature: Casino sub-menu navigation
        |Latest Provider|
        |Exclusives|
        When I click on each category one by one
-       Then each category redirects to the correct page
-        | Popular          | /popular            |
-        | New              | /new                |
-        | Slots            | /slots              |
-        | Jackpots         | /jackpots           |
-        | Buy Feature      | /buy-feature        |
-        | Hot Slots        | /hot-slots          |
-        | Table Games      | /table-games        |
-        | Drops & Wins     | /drops-and-wins     |
-        | Cash Drop        | /cash-drop          |
-        | Arcade           | /arcade             |
-        | Cluster Games    | /cluster-games      |
-        | Latest Provider  | /latest-provider    |
-        | Exclusives       | /exclusives         |
+        | category         | expectedUrl         |
+        |Popular          | /popular-games            |
+        |New              | /new-games                |
+        |Slots            | /slots              |
+        |Jackpots         | /jackpot-games           |
+        |Buy Feature      | /buy-feature        |
+        |Hot Slots        | /hot-slots          |
+        |Table Games      | /casino-games        |
+        |Drops & Wins     | /drops-and-wins     |
+        |Cash Drop        | /cash-drop          |
+        |Arcade           | /arcade-games             |
+        |Cluster Games    | /cluster-games      |
+        |Latest Provider  | /latest-provider    |
+        |Exclusives       | /exclusives         |
