@@ -34,14 +34,14 @@
      -Save them in node_modules folder within the project directory
 
 ### 2. Verify installation
-    - If the installation is complete, verify that the node_modules folder has been create and contains required packages.
-    - Run `ls node_modules` in your terminal to verify.
-    - If the node_modules folder is not created or if the packages are missing, check your npm configuration or try running `npm install` again.
-    - If issues persist or some dependencies are missing, manually install the required packages using the following commands:
-        npm install cypress --save-dev
-        npm install @badeball/cypress-cucumber-preprocessor --save-dev
-        npm install @bahmutov/cypress-esbuild-preprocessor --save-dev
-        npm install esbuild --save-dev
+ - If the installation is complete, verify that the node_modules folder has been create and contains required packages.
+ - Run `ls node_modules` in your terminal to verify.
+ - If the node_modules folder is not created or if the packages are missing, check your npm configuration or try running `npm install` again.
+ - If issues persist or some dependencies are missing, manually install the required packages using the following commands:
+    npm install cypress --save-dev
+    npm install @badeball/cypress-cucumber-preprocessor --save-dev
+    npm install @bahmutov/cypress-esbuild-preprocessor --save-dev
+    npm install esbuild --save-dev
 
 ### 3. Run Cypress Tests
 
