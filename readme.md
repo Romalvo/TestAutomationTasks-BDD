@@ -18,6 +18,7 @@
 ### 3. Clone the Project Repository.
 
 - Run the following command in the terminal to clone the project repository:
+    ```bash
     git clone https://github.com/Romalvo/TestAutomationTasks-BDD
 
 - Change Directory into the Project Folder.
