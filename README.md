@@ -56,3 +56,12 @@
  - When Cypress is running need to choose  E2E testing mode
  - The default browser for running Cypress tests in this project is set to Google Chrome 
  - You can run tests by clicking on the test file in the GUI.
+
+- It is also possible to run all tests in terminal. To run all tests in terminal Run the following command:
+    ```bash
+        npx cypress run
+
+ - This command will run all tests in the terminal and all results will show in Terminal output
+ - If there are will be any errors Cypress will automaticaly create Screenshots for checking the results.
+ - Screenshots saved in screenshots folder.       
+    
