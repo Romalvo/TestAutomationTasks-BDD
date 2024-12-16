@@ -51,6 +51,7 @@
 - Run the following command in the terminal to start the Cypress Test Runner:
     ```bash
     npx cypress open
+    
     - This command will open the Cypress Test Runner GUI.
     - When Cypress is running need to choose  E2E testing mode
     - The default browser for running Cypress tests in this project is set to Google Chrome 
