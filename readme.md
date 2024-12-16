@@ -52,7 +52,7 @@
     ```bash
         npx cypress open
 
-    - This command will open the Cypress Test Runner GUI.
-    - When Cypress is running need to choose  E2E testing mode
-    - The default browser for running Cypress tests in this project is set to Google Chrome 
-    - You can run tests by clicking on the test file in the GUI.
+ - This command will open the Cypress Test Runner GUI.
+ - When Cypress is running need to choose  E2E testing mode
+ - The default browser for running Cypress tests in this project is set to Google Chrome 
+ - You can run tests by clicking on the test file in the GUI.
