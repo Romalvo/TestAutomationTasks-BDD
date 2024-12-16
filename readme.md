@@ -8,6 +8,7 @@
 - Node.js is required to run Cypress. Download and install the latest LTS version from https://nodejs.org/en/download/.
 
 - After installation, verify it by running the following command in terminal:
+    ```bash
     node -v
 
 ### 2. Create a folder for This Project.
@@ -48,6 +49,7 @@
 ### 3. Run Cypress Tests
 
 - Run the following command in the terminal to start the Cypress Test Runner:
+    ```bash
     npx cypress open
     - This command will open the Cypress Test Runner GUI.
     - When Cypress is running need to choose  E2E testing mode
