@@ -1,4 +1,4 @@
-#This guide explains step by step how to set up, install and run tests.
+# This guide explains step by step how to set up, install and run tests.
 
 
 ## Preconditions
